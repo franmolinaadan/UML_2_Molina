@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+actor "Agente" as actor1
+"Evaluar \n Solicitud de credito" as (Evaluar)
+"Solicitar informacion \n adicional al cliente" as (Solicitar)
+actor1 --> Evaluar
+Solicitar ..> Evaluar:<<extend>>
+@enduml

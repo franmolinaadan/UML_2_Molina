@@ -1,0 +1,9 @@
+@startuml
+actor "Agente" as actor1
+"Enviar solicitud de credito" as (Solicitud)
+"Enviar solicitud de credito personal" as (SolicitudPersonal)
+"Enviar solicitud de credito empresarial" as (SolicitudEmpresarial)
+actor1 --> Solicitud
+SolicitudPersonal --|> Solicitud
+SolicitudEmpresarial --|> Solicitud
+@enduml

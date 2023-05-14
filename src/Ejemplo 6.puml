@@ -1,0 +1,7 @@
+@startuml
+actor "Cliente Bancario" as cliente1
+actor "Cliente Corporativo" as cliente2
+actor "Cliente Normal" as cliente3
+cliente1 <|-- cliente2
+cliente1 <|-- cliente3
+@enduml

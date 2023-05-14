@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+actor "Empleado" as actor1
+"Alta Cliente" as (alta)
+"Introducir Pedido" as (introducir)
+"Obtener Estado Pedido" as (obtener)
+"Cancelar Pedido" as (cancelar)
+"Buscar Pedido" as (buscar)
+"Pago en cuenta" as (pago)
+"Pago con tarjeta" as (pagoT)
+"Buscar Cliente" as (buscarC)
+actor1-- (alta)
+actor1-- (introducir)
+actor1-- (obtener)
+actor1-- (cancelar)
+actor1-- (buscar)
+(alta) ..> (introducir):extiende
+(introducir) ..> (buscarC):incluye
+(introducir) <..(pagoT):extiende
+(introducir) <..(pago):extiende
+(obtener) ..> (buscar):incluye
+(cancelar) ..>(buscar):incluye
+
+actor "Administrador" as actor2
+"Nuevo Producto" as (nuevo)
+"Borrar Producto" as (borrar)
+actor2-- (nuevo)
+actor2-- (borrar)
+@enduml

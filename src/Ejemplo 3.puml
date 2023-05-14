@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+actor "Bibliotecario" as actor1
+"Baja socio" as (Baja)
+"Buscar socio" as (Buscar)
+actor1 --> Baja
+Baja ..> Buscar:<<include>>
+@enduml

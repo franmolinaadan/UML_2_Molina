@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor "Socio" as actor1
+actor "Bibliotecario" as actor2
+rectangle Biblioteca{
+"Reservar Libro" as (Reservar)
+"Prestar Libro" as (Prestar)
+"Devolver Libro" as (Devolver)
+"Actualizar Catalogo" as (Actualizar)
+}
+actor1 -- Reservar
+actor1 -- Prestar
+actor1 -- Devolver
+actor2 -- Actualizar
+actor2 -- Prestar
+@enduml
